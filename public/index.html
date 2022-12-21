@@ -22,8 +22,36 @@
 			<section class="showcase">
 				<form id="image-form">
 					<h1>Describe An Image</h1>
+					<!--Select Medium-->
 					<div class="form-control">
-						<input type="text" id="prompt" placeholder="Enter Text..." />
+						<!--Add radio buttons for different art mediums in a row-->
+						<label for="subject">Subject:</label>
+						<input type="radio" name="subject" id="subject" value="waterfall" />
+						Waterfall
+						<input type="radio" name="subject" id="subject" value="flowers" />
+						Flowers
+						<input type="radio" name="subject" id="subject" value="rocks" />
+						Rocks
+						<input type="radio" name="subject" id="subject" value="landscape" />
+						Landscape
+						<input type="radio" name="subject" id="subject" value="life" />
+						Still Life
+						<input type="text" id="prompt" />
+					</div>
+					<!--Select Subject-->
+					<div class="form-control">
+						<!--Add radio buttons for different art mediums in a row-->
+						<label for="medium">Art Medium:</label>
+						<input type="radio" name="medium" id="medium" value="drawing" />
+						Drawing
+						<input type="radio" name="medium" id="medium" value="oil" /> Oil
+						<input type="radio" name="medium" id="medium" value="pastel" />
+						Pastel
+						<input type="radio" name="medium" id="medium" value="watercolor" />
+						Watercolor
+						<input type="radio" name="medium" id="medium" value="acrylic" />
+						Acrylic
+						<input type="text" id="prompt" />
 					</div>
 					<!-- size -->
 					<div class="form-control">

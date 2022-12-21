@@ -4,14 +4,17 @@ function onSubmit(e) {
 	document.querySelector('.msg').textContent = '';
 	document.querySelector('#image').src = '';
 
-	const prompt = document.querySelector('#prompt').value;
-	const size = document.querySelector('#size').value;
+	let prompt = document.querySelector('#prompt').value;
+	let size = document.querySelector('#size').value;
 
-	const subject = document.querySelector('#subject').value;
-	const medium = document.querySelector('#medium').value;
+	let subject = document.querySelector('input[name=subject]:checked').value;
+	let medium = document.querySelector('input[name=medium]:checked').value;
 
 	// make a prompt text based on the user's input of the subject and medium(a painting of a waterfall in watercolor) and add it to the prompt field in the form
-	prompt += `A painting of a ${subject} in ${medium}`;
+	prompt += `A ${subject} in ${medium}`;
+
+	// add the prompt text to the prompt field in the form so the user can see it
+	document.querySelector('#prompt').value = prompt;
 
 	/* if (prompt === '') {
 		alert('Please add some text');

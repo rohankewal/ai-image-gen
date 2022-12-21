@@ -21,6 +21,12 @@ function onSubmit(e) {
 		return;
 	} */
 
+	// if both the subject and medium are not selected, then the user will be alerted to select one
+	if (subject === 'none' && medium === 'none') {
+		alert('Please select a subject and medium to generate an image');
+		return;
+	}
+
 	generateImageRequest(prompt, size);
 }
 

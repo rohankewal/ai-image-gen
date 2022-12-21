@@ -23,7 +23,7 @@
 				<form id="image-form">
 					<h1>Describe An Image</h1>
 					<!--Select Medium-->
-					<div class="form-control">
+					<div>
 						<!--Add radio buttons for different art mediums in a row-->
 						<label for="subject">Subject:</label>
 						<input type="radio" name="subject" id="subject" value="waterfall" />
@@ -36,10 +36,9 @@
 						Landscape
 						<input type="radio" name="subject" id="subject" value="life" />
 						Still Life
-						<input type="text" id="prompt" />
 					</div>
 					<!--Select Subject-->
-					<div class="form-control">
+					<div>
 						<!--Add radio buttons for different art mediums in a row-->
 						<label for="medium">Art Medium:</label>
 						<input type="radio" name="medium" id="medium" value="drawing" />
@@ -51,15 +50,18 @@
 						Watercolor
 						<input type="radio" name="medium" id="medium" value="acrylic" />
 						Acrylic
-						<input type="text" id="prompt" />
 					</div>
 					<!-- size -->
 					<div class="form-control">
+						<label for="size">Size:</label>
 						<select name="size" id="size">
 							<option value="small">Small</option>
 							<option value="medium" selected>Medium</option>
 							<option value="large">Large</option>
 						</select>
+					</div>
+					<div>
+						<input type="text" id="prompt" readonly />
 					</div>
 					<button type="submit" class="btn">Generate</button>
 				</form>

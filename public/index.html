@@ -23,33 +23,26 @@
 				<form id="image-form">
 					<h1>Describe An Image</h1>
 					<!--Select Medium-->
-					<div>
-						<!--Add radio buttons for different art mediums in a row-->
+					<div class="form-control">
 						<label for="subject">Subject:</label>
-						<input type="radio" name="subject" value="waterfall" />
-						Waterfall
-						<input type="radio" name="subject" value="flowers" />
-						Flowers
-						<input type="radio" name="subject" value="rocks" />
-						Rocks
-						<input type="radio" name="subject" value="landscape" />
-						Landscape
-						<input type="radio" name="subject" value="life" />
-						Still Life
+						<select name="subject" id="subject">
+							<option value="waterfall">Waterfall</option>
+							<option value="flowers">Flowers</option>
+							<option value="rocks">Rocks</option>
+							<option value="landscape">Landscape</option>
+							<option value="life">Still Life</option>
+						</select>
 					</div>
 					<!--Select Subject-->
-					<div>
-						<!--Add radio buttons for different art mediums in a row-->
+					<div class="form-control">
 						<label for="medium">Art Medium:</label>
-						<input type="radio" name="medium" value="drawing" />
-						Drawing
-						<input type="radio" name="medium" value="oil" /> Oil
-						<input type="radio" name="medium" value="pastel" />
-						Pastel
-						<input type="radio" name="medium" value="watercolor" />
-						Watercolor
-						<input type="radio" name="medium" value="acrylic" />
-						Acrylic
+						<select name="medium" id="medium">
+							<option value="drawing">Drawing</option>
+							<option value="oil">Oil</option>
+							<option value="pastel">Pastel</option>
+							<option value="watercolor">Watercolor</option>
+							<option value="acrylic">Acrylic</option>
+						</select>
 					</div>
 					<!-- size -->
 					<div class="form-control">

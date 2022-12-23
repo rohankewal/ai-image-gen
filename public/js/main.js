@@ -7,13 +7,11 @@ function onSubmit(e) {
 	let prompt = document.querySelector('#prompt').value;
 	let size = document.querySelector('#size').value;
 
-	let subject = document.querySelector('input[name=subject]:checked').value;
-	let medium = document.querySelector('input[name=medium]:checked').value;
+	let medium = document.querySelector('#medium').value;
+	let subject = document.querySelector('#subject').value;
 
-	// make a prompt text based on the user's input of the subject and medium(a painting of a waterfall in watercolor) and add it to the prompt field in the form
 	prompt += `A ${subject} in ${medium}`;
 
-	// add the prompt text to the prompt field in the form so the user can see it
 	document.querySelector('#prompt').value = prompt;
 
 	/* if (prompt === '') {
@@ -21,7 +19,6 @@ function onSubmit(e) {
 		return;
 	} */
 
-	// if both the subject and medium are not selected, then the user will be alerted to select one
 	if (subject === 'none' && medium === 'none') {
 		alert('Please select a subject and medium to generate an image');
 		return;

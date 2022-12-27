@@ -14,7 +14,7 @@
 
 body {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.5;
 	color: #333;
 	background: #f4f4f4;
@@ -51,7 +51,7 @@ body {
 
 /* Showcase */
 .showcase {
-	height: 600px;
+	min-height: 700px;
 	width: 100%;
 	background: var(--primary-color);
 }
@@ -96,6 +96,10 @@ form button {
 
 form button:hover {
 	transform: scale(1.1);
+}
+
+label {
+	font-size: 20px;
 }
 
 .form-control {

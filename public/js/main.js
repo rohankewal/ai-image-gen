@@ -9,8 +9,9 @@ function onSubmit(e) {
 
 	let medium = document.querySelector('#medium').value;
 	let subject = document.querySelector('#subject').value;
+	let frame = document.querySelector('#frame').value;
 
-	prompt += `A ${subject} in ${medium}`;
+	prompt += `A ${subject} in ${medium} with a ${frame}`;
 
 	document.querySelector('#prompt').value = prompt;
 

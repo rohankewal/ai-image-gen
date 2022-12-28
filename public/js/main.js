@@ -4,6 +4,11 @@ function onSubmit(e) {
 	document.querySelector('.msg').textContent = '';
 	document.querySelector('#image').src = '';
 
+	const tokenDisplay = document.querySelector('#token-display');
+	const generateBtn = document.querySelector('#generate-btn');
+
+	let tokens = 20;
+
 	let prompt = document.querySelector('#prompt').value;
 	let size = document.querySelector('#size').value;
 
@@ -25,7 +30,19 @@ function onSubmit(e) {
 		return;
 	}
 
-	generateImageRequest(prompt, size);
+	generateBtn.addEventListener('click', () => {
+		tokens--;
+
+		tokenDisplay.textContent = tokens;
+
+		if (tokens > 0) {
+			generateImageRequest(prompt, size);
+		} else {
+			generateBtn.disabled = true;
+		}
+	});
+
+	// generateImageRequest(prompt, size);
 }
 
 async function generateImageRequest(prompt, size) {

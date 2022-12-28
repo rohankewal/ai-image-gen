@@ -33,7 +33,7 @@ function onSubmit(e) {
 	generateBtn.addEventListener('click', () => {
 		tokens--;
 
-		tokenDisplay.textContent = tokens;
+		tokenDisplay.innerHTML = `Tokens: ${tokens}`;
 
 		if (tokens > 0) {
 			generateImageRequest(prompt, size);

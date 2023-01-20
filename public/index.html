@@ -1,96 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/spinner.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
 
-		<script src="js/main.js" defer></script>
-		<title>OpenAI Image Genrator</title>
-	</head>
-	<body>
-		<header>
-			<div class="navbar">
-				<div class="logo">
-					<h2>OpenAI Image Genrator</h2>
-				</div>
-				<div class="nav-links">
-					<ul>
-						<li>
-							<p id="token-display"></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</header>
+    <script src="js/main.js" defer></script>
+    <title>OpenAI Image Genrator</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h2>OpenAI Image Genrator</h2>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <div id="tokens"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-		<main>
-			<section class="showcase">
-				<form id="image-form">
-					<h1>Describe An Image</h1>
-					<!--Select Medium-->
-					<div class="form-control">
-						<label for="subject">Subject:</label>
-						<select name="subject" id="subject">
-							<option value="waterfall">Waterfall</option>
-							<option value="flowers">Flowers</option>
-							<option value="rocks">Rocks</option>
-							<option value="landscape">Landscape</option>
-							<option value="life">Still Life</option>
-						</select>
-					</div>
-					<!--Select Subject-->
-					<div class="form-control">
-						<label for="medium">Medium:</label>
-						<select name="medium" id="medium">
-							<option value="drawing">Drawing</option>
-							<option value="oil">Oil</option>
-							<option value="pastel">Pastel</option>
-							<option value="watercolor">Watercolor</option>
-							<option value="acrylic">Acrylic</option>
-						</select>
-					</div>
-					<!-- Frame around picture -->
-					<div class="form-control">
-						<label for="frame">Frame:</label>
-						<select name="frame" id="frame">
-							<option value="no" selected>No Frame</option>
-							<option value="meuseum-frame">Meuseum Frame</option>
-							<option value="wood-frame">Wood Frame</option>
-							<option value="metal-frame">Metal Frame</option>
-							<option value="modern-frame">Modern Frame</option>
-						</select>
-					</div>
-					<!-- size -->
-					<div class="form-control">
-						<label for="size">Size:</label>
-						<select name="size" id="size">
-							<option value="small">Small</option>
-							<option value="medium" selected>Medium</option>
-							<option value="large">Large</option>
-						</select>
-					</div>
-					<div>
-						<input
-							type="text"
-							id="prompt"
-							placeholder="image prompt ..."
-							readonly
-						/>
-					</div>
-					<button id="generate-btn" type="submit" class="btn">Generate</button>
-				</form>
-			</section>
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <h1>Describe An Image</h1>
+          <!--Select Medium-->
+          <div class="form-control">
+            <label for="subject">Subject:</label>
+            <select name="subject" id="subject">
+              <option value="waterfall">Waterfall</option>
+              <option value="flowers">Flowers</option>
+              <option value="rocks">Rocks</option>
+              <option value="landscape">Landscape</option>
+              <option value="life">Still Life</option>
+            </select>
+          </div>
+          <!--Select Subject-->
+          <div class="form-control">
+            <label for="medium">Medium:</label>
+            <select name="medium" id="medium">
+              <option value="drawing">Drawing</option>
+              <option value="oil">Oil</option>
+              <option value="pastel">Pastel</option>
+              <option value="watercolor">Watercolor</option>
+              <option value="acrylic">Acrylic</option>
+            </select>
+          </div>
+          <!-- Frame around picture -->
+          <div class="form-control">
+            <label for="frame">Frame:</label>
+            <select name="frame" id="frame">
+              <option value="no-frame" selected>No Frame</option>
+              <option value="meuseum-frame">Meuseum Frame</option>
+              <option value="wood-frame">Wood Frame</option>
+              <option value="metal-frame">Metal Frame</option>
+              <option value="modern-frame">Modern Frame</option>
+            </select>
+          </div>
+          <!-- size -->
+          <div class="form-control">
+            <label for="size">Size:</label>
+            <select name="size" id="size">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" id="prompt" placeholder="image prompt ..." />
+          </div>
+          <button type="submit" class="btn">Generate</button>
+        </form>
+      </section>
 
-			<section class="image">
-				<div class="image-container">
-					<h2 class="msg"></h2>
-					<img src="" alt="" id="image" />
-				</div>
-			</section>
-		</main>
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
 
-		<div class="spinner"></div>
-	</body>
+    <div class="spinner"></div>
+  </body>
 </html>

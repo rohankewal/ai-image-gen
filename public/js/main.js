@@ -15,23 +15,12 @@ function onSubmit(e) {
 
   let medium = document.querySelector("#medium").value;
   let subject = document.querySelector("#subject").value;
-  let frame = document.querySelector("#frame").value;
+  // let frame = document.querySelector("#frame").value;
 
   // TODO: Change prompt for more refined results
-  prompt += `${subject} in ${medium} with ${frame}`;
+  // prompt += `${subject} in ${medium} with ${frame}`;
 
-  if (frame == "no-frame") {
-    prompt += `${subject} in ${medium} without a frame`;
-  }
-  if (frame == "wood-frame") {
-    prompt += `${subject} in ${medium} with a wooden museum frame`;
-  }
-  if (frame == "metal-frame") {
-    prompt += `${subject} in ${medium} with a metal museum frame`;
-  }
-  if (frame == "modern-frame") {
-    prompt += `${subject} in ${medium} with a modern museum frame`;
-  }
+  prompt += `Painting of a ${subject} in ${medium} with a beautiful frame around the painting`;
 
   tokens -= 1;
   console.log("tokens:" + tokens);
@@ -91,6 +80,10 @@ function showSpinner() {
 
 function removeSpinner() {
   document.querySelector(".spinner").classList.remove("show");
+}
+
+function resetForm() {
+  document.getElementById("image-form").reset();
 }
 
 document.querySelector("#image-form").addEventListener("submit", onSubmit);

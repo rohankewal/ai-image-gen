@@ -32,13 +32,12 @@
           <!--Select Medium-->
           <div class="form-control">
             <label for="subject">Subject:</label>
-            <select name="subject" id="subject">
-              <option value="waterfall">Waterfall</option>
-              <option value="flowers">Flowers</option>
-              <option value="rocks">Rocks</option>
-              <option value="landscape">Landscape</option>
-              <option value="life">Still Life</option>
-            </select>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="subject..."
+            />
           </div>
           <!--Select Subject-->
           <div class="form-control">
@@ -52,7 +51,7 @@
             </select>
           </div>
           <!-- Frame around picture -->
-          <div class="form-control">
+          <!--<div class="form-control">
             <label for="frame">Frame:</label>
             <select name="frame" id="frame">
               <option value="no-frame" selected>No Frame</option>
@@ -61,13 +60,11 @@
               <option value="metal-frame">Metal Frame</option>
               <option value="modern-frame">Modern Frame</option>
             </select>
-          </div>
+          </div> -->
           <!-- size -->
           <div class="form-control">
             <label for="size">Size:</label>
             <select name="size" id="size">
-              <option value="small">Small</option>
-              <option value="medium" selected>Medium</option>
               <option value="large">Large</option>
             </select>
           </div>
@@ -75,6 +72,9 @@
             <input type="text" id="prompt" placeholder="image prompt ..." />
           </div>
           <button type="submit" class="btn">Generate</button>
+          <button type="reset" class="reset-btn" onclick="resetForm()">
+            Reset
+          </button>
         </form>
       </section>
 

@@ -20,7 +20,7 @@ function onSubmit(e) {
   // TODO: Change prompt for more refined results
   // prompt += `${subject} in ${medium} with ${frame}`;
 
-  prompt += `Painting of a ${subject} in ${medium} with a beautiful frame around the painting`;
+  prompt += `Painting of ${subject} in top artist quality ${medium} style with a beautiful frame around the painting`;
 
   tokens -= 1;
   console.log("tokens:" + tokens);

@@ -55,7 +55,9 @@ body {
 .showcase {
   min-height: 700px;
   width: 100%;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background-color: #fff;
+  background-repeat: no-repeat;
 }
 
 .showcase h1 {
@@ -101,15 +103,25 @@ form button:hover {
 }
 
 .reset-btn {
-  background-color: transparent;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  border: 2px solid #4f8a8b;
+  border-radius: 5px;
+  background: transparent;
   color: #4f8a8b;
-  border: 2px solid;
-  border-color: #4f8a8b;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .reset-btn:hover {
   background-color: #4f8a8b;
   color: #fff;
+}
+
+.reset-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 label {

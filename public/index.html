@@ -27,6 +27,7 @@
 
     <main>
       <section class="showcase">
+        <!-- TODO: fade the form when the image is generated -->
         <form id="image-form">
           <h1>Describe An Image</h1>
           <!--Select Medium-->
@@ -73,11 +74,15 @@
             <input type="text" id="prompt" placeholder="image prompt ..." />
           </div>
           <button type="submit" class="btn">Generate</button>
-          <button type="reset" class="reset-btn" onclick="resetForm()">
-            Reset
-          </button>
         </form>
       </section>
+
+      <!-- PERF: move the button out of the form section -->
+      <div class="reset-container">
+        <button type="reset" class="reset-btn" onclick="resetForm()">
+          Reset
+        </button>
+      </div>
 
       <section class="image">
         <div class="image-container">

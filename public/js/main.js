@@ -18,9 +18,7 @@ function onSubmit(e) {
   // let frame = document.querySelector("#frame").value;
 
   // TODO: Change prompt for more refined results
-  // prompt += `${subject} in ${medium} with ${frame}`;
-
-  prompt += `Painting of ${subject} in top artist quality ${medium} style with a beautiful frame around the painting`;
+  prompt += `Painting of ${subject} in top artist quality ${medium} style with a beautiful meuseum style frame around the painting`;
 
   tokens -= 1;
   console.log("tokens:" + tokens);
@@ -67,6 +65,9 @@ async function generateImageRequest(prompt, size) {
     const imageUrl = data.data;
 
     document.querySelector("#image").src = imageUrl;
+
+    var showcase = document.getElementById("showcase");
+    showcase.style.backgroundImage = "url(" + imageUrl + ")";
 
     removeSpinner();
   } catch (error) {

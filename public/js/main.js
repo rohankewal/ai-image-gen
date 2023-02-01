@@ -17,7 +17,7 @@ function onSubmit(e) {
   let subject = document.querySelector("#subject").value;
   // let frame = document.querySelector("#frame").value;
 
-  // TODO: Change prompt for more refined results
+  // PERF: Change prompt for more refined results
   prompt += `Painting of ${subject} in top artist quality ${medium} style with a beautiful meuseum style frame around the painting`;
 
   tokens -= 1;
@@ -31,12 +31,29 @@ function onSubmit(e) {
 		return;
 	} */
 
+  if (tokens == 19) {
+    // TODO: display a popup for name and email
+  }
+
   if (subject === "none" && medium === "none") {
     alert("Please select a subject and medium to generate an image");
     return;
   }
 
   generateImageRequest(prompt, size);
+}
+
+function hideForm() {
+  document.getElementById("image-form").style.display = "none";
+  var modal = document.getElementById("modal");
+  var closeModalButton = document.getElementById("close-modal-button");
+  // open the modal when the button is clicked
+  modal.style.display = "block";
+
+  // close the modal when the close button is clicked
+  closeModalButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
 }
 
 async function generateImageRequest(prompt, size) {
@@ -85,6 +102,7 @@ function removeSpinner() {
 
 function resetForm() {
   document.getElementById("image-form").reset();
+  document.getElementById("image-form").style.display = "flex";
 }
 
 document.querySelector("#image-form").addEventListener("submit", onSubmit);

@@ -20,7 +20,10 @@ body {
   background: #f4f4f4;
 }
 
-/* Image design */
+main {
+  align-items: center;
+  justify-content: center;
+}
 
 /* Navbar */
 .navbar {
@@ -51,13 +54,22 @@ body {
   color: var(--primary-color);
 }
 
+.logo {
+  margin: auto;
+}
+
 /* Showcase */
+/* TODO: center the showcase */
 .showcase {
   min-height: 700px;
   width: 100%;
   /* background: var(--primary-color); */
   background-color: #fff;
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 1200px;
+  margin: auto;
 }
 
 .showcase h1 {
@@ -87,6 +99,7 @@ form select {
   margin-bottom: 1rem;
 }
 
+/* TODO: change button colors */
 form button {
   font-size: 20px;
   padding: 1rem 2rem;
@@ -102,6 +115,7 @@ form button:hover {
   transform: scale(1.1);
 }
 
+/* TODO: change button colors */
 .reset-btn {
   font-size: 20px;
   padding: 1rem 2rem;
@@ -139,6 +153,7 @@ label {
 .image {
   width: 100%;
   margin-top: 2rem;
+  display: none;
 }
 
 img {
@@ -150,4 +165,57 @@ img {
   font-size: 1.6rem;
   text-align: center;
   margin-top: 1rem;
+}
+
+#modal {
+  display: none; /* hide the modal by default */
+  position: fixed; /* position the modal in the center of the screen */
+  z-index: 1; /* make sure the modal is on top of other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* take up the full width of the screen */
+  height: 100%; /* take up the full height of the screen */
+  overflow: auto; /* enable scrolling if the content exceeds the height */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* make the background semi-transparent */
+}
+
+#modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* center the modal horizontally and vertically */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* set the width of the modal */
+}
+
+#close-modal-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-modal-button:hover,
+#close-modal-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-input {
+  font-size: 20px;
+  width: 500px;
+  max-width: 500px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  text-align: center;
 }

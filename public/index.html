@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/spinner.css" />
 
     <script src="js/main.js" defer></script>
-    <title>OpenAI Image Genrator</title>
+    <title>Everyone Is Really Creative</title>
   </head>
   <body>
     <header>
       <div class="navbar">
         <div class="logo">
-          <h2>OpenAI Image Genrator</h2>
+          <h2>Everyone Really Is Creative</h2>
         </div>
         <div class="nav-links">
           <ul>
@@ -26,8 +26,8 @@
     </header>
 
     <main>
-      <section class="showcase">
-        <!-- TODO: fade the form when the image is generated -->
+      <section id="showcase" class="showcase">
+        <!-- PERF: fade the form when the image is generated -->
         <form id="image-form">
           <h1>Describe An Image</h1>
           <!--Select Medium-->
@@ -44,7 +44,7 @@
           <div class="form-control">
             <label for="medium">Medium:</label>
             <select name="medium" id="medium">
-              <option disabled selected>Medium</option>
+              <option disabled selected>Medium...</option>
               <option value="drawing">Drawing</option>
               <option value="oil">Oil</option>
               <option value="pastel">Pastel</option>
@@ -73,11 +73,17 @@
           <div>
             <input type="text" id="prompt" placeholder="image prompt ..." />
           </div>
-          <button type="submit" class="btn">Generate</button>
+          <button
+            type="submit"
+            class="btn"
+            id="submit-btn"
+            onclick="hideForm()"
+          >
+            Generate
+          </button>
         </form>
       </section>
 
-      <!-- PERF: move the button out of the form section -->
       <div class="reset-container">
         <button type="reset" class="reset-btn" onclick="resetForm()">
           Reset
@@ -90,6 +96,22 @@
           <img src="" alt="" id="image" />
         </div>
       </section>
+
+      <div id="modal">
+        <div id="modal-content">
+          <!--<span id="close-modal-button">&times;</span>-->
+          <h1 class="modal-title">Sign up for Updates</h1>
+          <form>
+            <label class="modal-label" for="name">Name:</label><br />
+            <input class="modal-input" type="text" id="name" name="name" />
+            <br /><br />
+            <label class="modal-label" for="email">Email:</label><br />
+            <input class="modal-input" type="email" id="email" name="email" />
+            <br /><br />
+            <button type="submit" class="reset-btn">Submit</button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <div class="spinner"></div>

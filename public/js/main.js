@@ -64,16 +64,19 @@ async function generateImageRequest(prompt, size) {
   try {
     showSpinner();
 
-    const response = await fetch("/openai/generateimage", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        prompt,
-        size,
-      }),
-    });
+    const response = await fetch(
+      "https://ai-image-gen-git-main-rohankewal.vercel.app/openai/generateimage",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt,
+          size,
+        }),
+      }
+    );
 
     if (!response.ok) {
       removeSpinner();

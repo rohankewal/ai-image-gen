@@ -71,7 +71,7 @@
             </select>
           </div>
           <div>
-            <input type="text" id="prompt" placeholder="image prompt ..." />
+            <input type="text" id="prompt" placeholder="image prompt..." />
           </div>
           <button
             type="submit"
@@ -99,16 +99,30 @@
 
       <div id="modal">
         <div id="modal-content">
-          <!--<span id="close-modal-button">&times;</span>-->
+          <span id="close-modal-button">&times;</span>
           <h1 class="modal-title">Sign up for Updates</h1>
-          <form>
+          <form id="modal-form" method="post">
             <label class="modal-label" for="name">Name:</label><br />
-            <input class="modal-input" type="text" id="name" name="name" />
+            <input
+              class="modal-input"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
             <br /><br />
             <label class="modal-label" for="email">Email:</label><br />
-            <input class="modal-input" type="email" id="email" name="email" />
+            <input
+              class="modal-input"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
             <br /><br />
-            <button type="submit" class="reset-btn">Submit</button>
+            <button type="submit" id="close-btn" class="reset-btn">
+              Submit
+            </button>
           </form>
         </div>
       </div>

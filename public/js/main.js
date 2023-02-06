@@ -47,11 +47,15 @@ function hideForm() {
   document.getElementById("image-form").style.display = "none";
   var modal = document.getElementById("modal");
   var closeModalButton = document.getElementById("close-modal-button");
+  var closeBtn = document.getElementById("close-btn");
   // open the modal when the button is clicked
   modal.style.display = "block";
 
   // close the modal when the close button is clicked
   closeModalButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+  closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
   });
 }
@@ -103,6 +107,9 @@ function removeSpinner() {
 function resetForm() {
   document.getElementById("image-form").reset();
   document.getElementById("image-form").style.display = "flex";
+  document.getElementById("image-form").style.display = "flex";
+  document.getElementById("image-form").style.backgroundColor =
+    "rgba(255, 255, 255, 0.5)";
 }
 
 document.querySelector("#image-form").addEventListener("submit", onSubmit);
